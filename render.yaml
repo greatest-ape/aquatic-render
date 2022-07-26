@@ -1,6 +1,7 @@
 services:
   - type: web
     name: aquatic_ws
+    plan: free
     env: docker
     repo: https://github.com/greatest-ape/aquatic.git
     region: frankfurt
