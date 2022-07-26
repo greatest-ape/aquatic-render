@@ -1,14 +1,14 @@
 services:
-    - type: web
-        name: aquatic_ws
-        env: docker
-        repo: https://github.com/greatest-ape/aquatic.git
-        region: frankfurt
-        dockerfilePath: ./docker/aquatic_ws.Dockerfile
-        dockerContext: .
-        branch: docker-2022-07-19
-        healthCheckPath: /health
-        envVars:
+  - type: web
+    name: aquatic_ws
+    env: docker
+    repo: https://github.com/greatest-ape/aquatic.git
+    region: frankfurt
+    dockerfilePath: ./docker/aquatic_ws.Dockerfile
+    dockerContext: .
+    branch: docker-2022-07-19
+    healthCheckPath: /health
+    envVars:
       - key: CONFIG_FILE_CONTENTS
         value: "
             log_level = 'info'
