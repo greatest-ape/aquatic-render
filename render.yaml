@@ -15,6 +15,7 @@ services:
           log_level = 'info'
 
           [network]
+          address = "0.0.0.0:80"
           enable_http_health_checks = true
 
           [access_list]
