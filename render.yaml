@@ -11,15 +11,15 @@ services:
     healthCheckPath: /health
     envVars:
       - key: CONFIG_FILE_CONTENTS
-        value: "
-            log_level = 'info'
+        value: |
+          log_level = 'info'
 
-            [network]
-            enable_http_health_checks = true
+          [network]
+          enable_http_health_checks = true
 
-            [access_list]
-            mode = 'allow'
-            "
+          [access_list]
+          mode = 'allow'
       - key: ACCESS_LIST_CONTENTS
         value: |
-            0f0f0f0f0f1f1f1f1f1f2f2f2f2f2f3f3f3f3f3f
+          0f0f0f0f0f1f1f1f1f1f2f2f2f2f2f3f3f3f3f3f
+          1f0f0f0f0f1f1f1f1f1f2f2f2f2f2f3f3f3f3f3f
