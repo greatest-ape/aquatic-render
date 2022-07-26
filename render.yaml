@@ -1,0 +1,24 @@
+services:
+    - type: web
+        name: aquatic_ws
+        env: docker
+        repo: https://github.com/greatest-ape/aquatic.git
+        region: frankfurt
+        dockerfilePath: ./docker/aquatic_ws.Dockerfile
+        dockerContext: .
+        branch: docker-2022-07-19
+        healthCheckPath: /health
+        envVars:
+      - key: CONFIG_FILE_CONTENTS
+        value: "
+            log_level = 'info'
+
+            [network]
+            enable_http_health_checks = true
+
+            [access_list]
+            mode = 'allow'
+            "
+      - key: ACCESS_LIST_CONTENTS
+        value: |
+            0f0f0f0f0f1f1f1f1f1f2f2f2f2f2f3f3f3f3f3f
